@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inbox</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=2">
+</head>
+<body>
+    <h1>{{ username }}'s Inbox</h1>
+
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="message-box">
+                <p><strong>From:</strong> {{ msg.sender }}</p>
+                <p><strong>Message:</strong> {{ msg.message }}</p>
+                <p><small>Sent at: {{ msg.timestamp }}</small></p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No messages yet.</p>
+    {% endif %}
+
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
