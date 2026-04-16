@@ -31,6 +31,17 @@ When receiving a message:
 - The AES key is decrypted using the receiver’s private key
 - The message is decrypted and displayed in the inbox
 
+## Screenshots
+
+### Register
+![Register](register.png)
+
+### Dashboard
+![Dashboard](dashboard.png)
+
+### Inbox
+![Inbox](inbox.png)
+
 ## Running the app
 ```bash
 source venv/bin/activate
